@@ -305,3 +305,44 @@ border:none;
 border-radius:8px;
 cursor:pointer;
 }
+
+
+/* PLAYER */
+
+.player-container{
+padding:30px;
+}
+
+.player-container h1{
+margin-bottom:20px;
+}
+
+#player{
+width:100%;
+max-width:1200px;
+border-radius:12px;
+background:black;
+}
+
+.player-buttons{
+margin-top:20px;
+display:flex;
+gap:15px;
+}
+
+.player-buttons button{
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.velocidade{
+margin-top:20px;
+}
+
+.velocidade select{
+padding:8px;
+border-radius:6px;
+}
+
