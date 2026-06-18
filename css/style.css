@@ -384,3 +384,36 @@ padding:15px;
 border-radius:10px;
 margin-top:10px;
 }
+
+
+/* ADMIN */
+
+.admin-container{
+padding:40px;
+}
+
+.admin-container h1{
+margin-bottom:20px;
+}
+
+.admin-box{
+background:#151515;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.admin-box input{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border:none;
+border-radius:8px;
+}
+
+.admin-box button{
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
