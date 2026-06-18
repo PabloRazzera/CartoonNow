@@ -251,3 +251,57 @@ font-weight:bold;
 margin-top:15px;
 text-align:center;
 }
+
+/* PÁGINA DA SÉRIE */
+
+.serie-banner{
+display:flex;
+gap:30px;
+padding:40px;
+}
+
+.serie-capa{
+width:280px;
+border-radius:12px;
+}
+
+.serie-info{
+max-width:700px;
+}
+
+.serie-info h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.serie-info p{
+margin-bottom:20px;
+}
+
+.serie-info button{
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.temporadas{
+padding:40px;
+}
+
+.episodio{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#151515;
+margin-top:15px;
+padding:15px;
+border-radius:10px;
+}
+
+.episodio button{
+padding:10px 15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
