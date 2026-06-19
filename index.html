@@ -4,130 +4,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>CartoonNow</title>
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
-<!-- MENU LATERAL -->
-<div class="sidebar" id="sidebar">
+<div class="app">
 
-    <div class="logo">
-        🎬 CartoonNow
-    </div>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
 
-    <ul>
-        <li>🏠 Início</li>
-        <li>🔥 Em Alta</li>
-        <li>⭐ Minha Lista</li>
-        <li>🕒 Histórico</li>
-        <li>👤 Perfil</li>
-        <li>⚙ Configurações</li>
-    </ul>
+        <div class="logo">🎬 CartoonNow</div>
+
+        <nav>
+            <a href="#">🏠 Início</a>
+            <a href="#">🔥 Em Alta</a>
+            <a href="#">⭐ Minha Lista</a>
+            <a href="#">🕒 Histórico</a>
+            <a href="#">⚙ Configurações</a>
+        </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <input id="search" type="text" placeholder="Buscar desenhos...">
+
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+            <h1>Pica-Pau</h1>
+            <p>Assista aos melhores desenhos clássicos</p>
+            <button>▶ Assistir</button>
+        </section>
+
+        <!-- CONTINUE -->
+        <section class="section">
+            <h2>Continuar Assistindo</h2>
+            <div class="row" id="continuarAssistindo"></div>
+        </section>
+
+        <!-- EM ALTA -->
+        <section class="section">
+            <h2>Em Alta</h2>
+            <div class="row" id="catalogo"></div>
+        </section>
+
+    </main>
 
 </div>
 
-<!-- TOPO -->
-<header class="topbar">
+<script src="js/data.js"></script>
+<script src="js/home.js"></script>
 
-    <button id="menuBtn">☰</button>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
 
-    <div class="search-box">
-        <input type="text" placeholder="Buscar desenhos...">
-    </div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CartoonNow</title>
 
-</header>
+<link rel="stylesheet" href="css/style.css">
+</head>
 
-<!-- HERO -->
-<section class="hero">
+<body>
 
-    <div class="overlay">
+<div class="app">
 
-        <h1>Pica-Pau</h1>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
 
-        <p>Assista aos melhores desenhos clássicos em alta qualidade.</p>
+        <div class="logo">🎬 CartoonNow</div>
 
-        <div class="hero-buttons">
-            <button class="play-btn">▶ Assistir</button>
-            <button class="info-btn">ℹ Detalhes</button>
-        </div>
+        <nav>
+            <a href="#">🏠 Início</a>
+            <a href="#">🔥 Em Alta</a>
+            <a href="#">⭐ Minha Lista</a>
+            <a href="#">🕒 Histórico</a>
+            <a href="#">⚙ Configurações</a>
+        </nav>
 
-    </div>
+    </aside>
 
-</section>
+    <!-- MAIN -->
+    <main class="main">
 
-<!-- CONTINUAR ASSISTINDO -->
-<section class="section">
+        <!-- TOPBAR -->
+        <header class="topbar">
 
-    <h2>▶ Continuar Assistindo</h2>
-    <div class="row" id="continuarAssistindo"></div>
+            <input id="search" type="text" placeholder="Buscar desenhos...">
 
-</section>
+        </header>
 
-<!-- EM ALTA -->
-<section class="section">
+        <!-- HERO -->
+        <section class="hero">
+            <h1>Pica-Pau</h1>
+            <p>Assista aos melhores desenhos clássicos</p>
+            <button>▶ Assistir</button>
+        </section>
 
-    <h2>🔥 Em Alta</h2>
+        <!-- CONTINUE -->
+        <section class="section">
+            <h2>Continuar Assistindo</h2>
+            <div class="row" id="continuarAssistindo"></div>
+        </section>
 
-    <div class="row">
+        <!-- EM ALTA -->
+        <section class="section">
+            <h2>Em Alta</h2>
+            <div class="row" id="catalogo"></div>
+        </section>
 
-        <div class="card">
-            <img src="assets/banners/picapaubanner.jfif">
-            <span>Pica-Pau</span>
-        </div>
+    </main>
 
-        <div class="card">
-            <img src="assets/banners/tomejerrybanner.jpg">
-            <span>Tom & Jerry</span>
-        </div>
+</div>
 
-        <div class="card">
-            <img src="assets/capas/scooby.jpg">
-            <span>Scooby-Doo</span>
-        </div>
-
-        <div class="card">
-            <img src="assets/capas/looney.jpg">
-            <span>Looney Tunes</span>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- POPULARES -->
-<section class="section">
-
-    <h2>⭐ Populares da Semana</h2>
-
-    <div class="row">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-    </div>
-
-</section>
-
-<!-- RECENTES -->
-<section class="section">
-
-    <h2>🆕 Adicionados Recentemente</h2>
-
-    <div class="row">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-    </div>
-
-</section>
-
-<!-- SCRIPTS (CORRETO) -->
 <script src="js/data.js"></script>
 <script src="js/home.js"></script>
 
