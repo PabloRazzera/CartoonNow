@@ -1,29 +1,36 @@
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+const epId = new URLSearchParams(window.location.search).get("id");
 
 const db = getDB();
 
-const ep = db.episodios.find(e => e.id === id);
+const ep = db.episodios.find(e => e.id === epId);
+
+const video = document.getElementById("player");
 
 if(ep){
 
-    const video = document.getElementById("player");
-
     video.src = ep.video;
 
-    const key = "progress_" + id;
+    const key = "progress_" + ep.id;
 
+    /* CARREGAR */
     video.currentTime = localStorage.getItem(key) || 0;
 
-    video.addEventListener("timeupdate", () => {
+    /* SALVAR CONTÍNUO (NÍVEL PROFISSIONAL) */
+    setInterval(() => {
+        localStorage.setItem(key, video.currentTime);
+    }, 2000);
+
+    /* SALVAR AO SAIR */
+    window.addEventListener("beforeunload", () => {
         localStorage.setItem(key, video.currentTime);
     });
 
-    video.addEventListener("pause", () => {
+    /* CONTINUAR ASSISTINDO GLOBAL */
+    video.addEventListener("timeupdate", () => {
 
         localStorage.setItem("continuar", JSON.stringify({
-            titulo: ep.titulo,
             id: ep.id,
+            titulo: ep.titulo,
             tempo: video.currentTime
         }));
 
