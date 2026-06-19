@@ -1,36 +1,21 @@
-function adicionarMinhaLista(){
+function adicionarMinhaLista(serie){
 
-```
-let lista =
-    JSON.parse(
-        localStorage.getItem("minhaLista")
-    ) || [];
+    let lista = JSON.parse(localStorage.getItem("minhaLista")) || [];
 
-lista.push({
-    nome:"Pica-Pau",
-    capa:"assets/capas/picapau.jpg"
-});
+    const existe = lista.find(s => s.id === serie.id);
 
-localStorage.setItem(
-    "minhaLista",
-    JSON.stringify(lista)
-);
+    if(!existe){
+        lista.push(serie);
+    }
 
-alert("Adicionado à Minha Lista!");
-```
+    localStorage.setItem("minhaLista", JSON.stringify(lista));
 
+    alert("Adicionado à Minha Lista!");
 }
 
 function assistir(id){
 
-```
-localStorage.setItem(
-    "episodioAtual",
-    id
-);
+    localStorage.setItem("episodioAtual", id);
 
-window.location.href =
-    "episodio.html";
-```
-
+    window.location.href = "episodio.html?id=" + id;
 }
