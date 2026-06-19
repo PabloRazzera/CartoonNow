@@ -1,7 +1,6 @@
 function carregarHome(){
 
     const db = getDB();
-
     const container = document.querySelector(".row");
 
     if(!container) return;
